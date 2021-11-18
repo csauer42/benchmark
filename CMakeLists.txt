@@ -13,6 +13,11 @@ foreach(p
   endif()
 endforeach()
 
+find_program(CCACHE "sccache")
+if(CCACHE)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE}")
+endif()
+
 project (benchmark VERSION 1.6.0 LANGUAGES CXX)
 
 option(BENCHMARK_ENABLE_TESTING "Enable testing of the benchmark library." ON)

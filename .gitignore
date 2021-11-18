@@ -65,3 +65,6 @@ CMakeSettings.json
 # Python build stuff
 dist/
 *.egg-info*
+
+.bash_history
+
